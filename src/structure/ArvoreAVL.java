@@ -5,7 +5,7 @@ import model.Filme;
 public class ArvoreAVL {
     NoAVL raiz = null;
 
-    void inserir(Filme filme){
+    public void inserir(Filme filme){
         raiz = inserir(raiz, filme);
     }
     NoAVL inserir(NoAVL arv, Filme filme){
@@ -154,7 +154,7 @@ public class ArvoreAVL {
         return y;
     }
 
-    Filme buscar(int id){
+    public Filme buscar(int id){
         return buscar(raiz, id);
     }
 
@@ -172,7 +172,7 @@ public class ArvoreAVL {
         }
     }
 
-    void evictLRU(){
+    public void evictLRU(){
         if (raiz == null) return;
         NoAVL menor = encontrarMenorAcesso(raiz);
         remover(menor.getFilme());
