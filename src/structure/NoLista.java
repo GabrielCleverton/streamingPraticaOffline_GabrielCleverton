@@ -6,9 +6,9 @@ public class NoLista {
     private Filme filme;
     private NoLista proximo;
 
-    public NoLista(Filme filme, NoLista proximo){
+    public NoLista(Filme filme){
         this.filme = filme;
-        this.proximo = proximo;
+        this.proximo = null;
     }
 
     public Filme getFilme() {

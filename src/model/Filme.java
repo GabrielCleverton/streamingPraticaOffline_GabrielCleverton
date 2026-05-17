@@ -25,42 +25,52 @@ public class Filme {
     }
 
     public String getNome() {
+
         return nome;
     }
 
     public void setNome(String nome) {
+
         this.nome = nome;
     }
 
     public String getSinopse() {
+
         return sinopse;
     }
 
     public void setSinopse(String sinopse) {
+
         this.sinopse = sinopse;
     }
 
     public int getAno() {
+
         return ano;
     }
 
     public void setAno(int ano) {
+
         this.ano = ano;
     }
 
     public int getDuracao() {
+
         return duracao;
     }
 
     public void setDuracao(int duracao) {
+
         this.duracao = duracao;
     }
 
     public Categoria getCategoria() {
+
         return categoria;
     }
 
     public void setCategoria(Categoria categoria) {
+
         this.categoria = categoria;
     }
 }
