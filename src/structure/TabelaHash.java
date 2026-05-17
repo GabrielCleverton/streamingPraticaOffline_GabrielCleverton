@@ -7,7 +7,6 @@ public class TabelaHash {
     public int getM() {
         return M;
     }
-
     public void setM(int m) {
         M = m;
     }
@@ -15,19 +14,18 @@ public class TabelaHash {
     public NoHash[] getTabela() {
         return tabela;
     }
-
     public void setTabela(NoHash[] tabela) {
         this.tabela = tabela;
     }
 
     public int hash(int id){
-        return id%M;
+        return id % M;
     }
 
     public void inserir(int id, NoLista referencia){
         int h = hash(id);
         NoHash no = tabela[h];
-        while (no!=null){
+        while (no != null){
             if (no.getId() == id){
                 return;
             }
@@ -35,20 +33,20 @@ public class TabelaHash {
         }
         NoHash novoNo = new NoHash(id, referencia);
         novoNo.setProximo(tabela[h]);
-        tabela[h]=novoNo;
+        tabela[h] = novoNo;
     }
 
     public NoLista buscar(int id){
         int comparacoes = 0;
         int h = hash(id);
-        NoHash noNovo = tabela[h];
-        while (noNovo != null){
+        NoHash no = tabela[h];
+        while (no != null){
             comparacoes++;
-            if (noNovo.getId() == id){
-                System.out.println("Comparações: " + comparacoes);
-                return noNovo.getReferencia();
+            if (no.getId() == id){
+                System.out.println("Comparações (Tabela Hash): " + comparacoes);
+                return no.getReferencia();
             }
-            noNovo = noNovo.getProximo();
+            no = no.getProximo();
         }
         return null;
     }

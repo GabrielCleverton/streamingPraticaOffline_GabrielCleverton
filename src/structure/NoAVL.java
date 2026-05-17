@@ -3,6 +3,7 @@ package structure;
 import model.Filme;
 
 public class NoAVL {
+    private int id;
     private Filme filme;
     private int ultimoAcesso;
     private int altura;
@@ -34,6 +35,14 @@ public class NoAVL {
 
     public void setUltimoAcesso(int ultimoAcesso) {
         this.ultimoAcesso = ultimoAcesso;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public NoAVL getDir() {

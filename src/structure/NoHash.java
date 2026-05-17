@@ -32,6 +32,5 @@ public class NoHash {
     public NoHash(int id, NoLista referencia){
         this.id = id;
         this.referencia = referencia;
-        this.proximo = null;
     }
 }
